@@ -19,3 +19,10 @@ variable retry_policies {
   description = "List of retry policies. See `retry` module."
   default = null
 }
+
+
+variable result_path {
+  description = "Result path parameter."
+  type = string
+  default = "$"
+}
