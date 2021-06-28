@@ -1,11 +1,11 @@
 locals {
-  branches = [for module in var.steps: {
-    StartAt = module.name
-    States = jsondecode(module.step != null ? jsonencode({
-      (module.name): merge(
-        module.step,
+  branches = [for mod in var.steps: {
+    StartAt = mod.step != null ? mod.name : mod.start_at
+    States = jsondecode(mod.step != null ? jsonencode({
+      (mod.name): merge(
+        mod.step,
         { End: true }
       )
-    }) : jsonencode(module.states))
+    }) : jsonencode(mod.states))
   }]
 }

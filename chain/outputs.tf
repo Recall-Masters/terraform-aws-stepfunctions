@@ -11,3 +11,8 @@ output name {
 output step {
   value = null
 }
+
+
+output start_at {
+  value = local.step_names[0]
+}
