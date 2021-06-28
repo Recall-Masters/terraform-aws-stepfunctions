@@ -1,6 +1,6 @@
 variable error_equals {
   description = "A non-empty array of strings that match error names, specified exactly as they are with the retrier field of the same name."
-  default = null
+  default = ["States.ALL"]
   type = list(string)
 }
 

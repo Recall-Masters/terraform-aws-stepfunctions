@@ -1,6 +1,6 @@
 variable error_equals {
   description = "A non-empty array of strings that match error names. When a state reports an error, Step Functions scans through the retriers. When the error name appears in this array, it implements the retry policy described in this retrier."
-  default = null
+  default = ["States.TaskFailed"]
   type = list(string)
 }
 
