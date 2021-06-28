@@ -15,6 +15,18 @@ variable name {
 }
 
 
+variable retry_policies {
+  description = "List of retry policies. See `retry` module."
+  default = null
+}
+
+
+variable catch_policies {
+  description = "List of catch policies. See `catch` module."
+  default = null
+}
+
+
 variable result_path {
   description = "Result path parameter."
   type = string
