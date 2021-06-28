@@ -1,5 +1,5 @@
 output step {
-  value = {
+  value = merge({
     # https://docs.aws.amazon.com/step-functions/latest/dg/connect-sqs.html
     Type = "Task"
     Resource = "arn:aws:states:::sqs:sendMessage.waitForTaskToken"
@@ -12,7 +12,7 @@ output step {
         }
       )
     }
-  }
+  }, local.maybe_retries)
 }
 
 output name {

@@ -13,3 +13,9 @@ variable name {
   description = "Name of the step."
   type = string
 }
+
+
+variable retry_policies {
+  description = "List of retry policies. See `retry` module."
+  default = null
+}
