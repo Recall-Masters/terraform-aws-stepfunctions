@@ -1,7 +1,9 @@
 output catch {
-  value = {
-    ErrorEquals: var.error_equals
-    ResultPath: var.result_path
-    Next: var.next
-  }
+  value = merge(
+    {
+      ResultPath: var.result_path
+      Next: var.next
+    },
+    local.maybe_error_equals,
+  )
 }
