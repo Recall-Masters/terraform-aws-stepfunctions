@@ -32,3 +32,10 @@ variable result_path {
   type = string
   default = "$"
 }
+
+
+variable heartbeat_seconds {
+  description = "Heartbeat timeout value in seconds."
+  type = number
+  default = null
+}
