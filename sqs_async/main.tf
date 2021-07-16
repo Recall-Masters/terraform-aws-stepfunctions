@@ -6,4 +6,8 @@ locals {
   maybe_catches = var.catch_policies == null ? {} : {
     Catch: [for module in var.catch_policies: module.catch]
   }
+
+  heartbeat_seconds = var.heartbeat_seconds == null ? {} : {
+    HeartbeatSeconds: var.heartbeat_seconds
+  }
 }

@@ -13,10 +13,11 @@ output step {
             "state_machine_token.$": "$$.Task.Token"
           }
         )
-      }
+      },
     },
     local.maybe_retries,
     local.maybe_catches,
+    local.heartbeat_seconds,
   )
 }
 
