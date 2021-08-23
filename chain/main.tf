@@ -12,10 +12,12 @@ locals {
 
   linked_steps = {for module in var.steps: module.name => merge(
     module.step,
-    local.step_to_next_step[module.name] == null ? {
+    local.step_to_next_step[module.name] == null && module.step.Type != "Fail" && module.step.Type != "Succeed" ? {
       End: true
-    } : {
-      Next: local.step_to_next_step[module.name]
-    }
+    } : (
+      module.step.Type != "Fail" && module.step.Type != "Succeed" ? {
+        Next: local.step_to_next_step[module.name]
+      } : {}
+    )
   )}
 }
