@@ -14,3 +14,9 @@ variable result_path {
   type = string
   default = "$"
 }
+
+
+variable additional_states {
+  description = "Additional states data."
+  default = {}
+}

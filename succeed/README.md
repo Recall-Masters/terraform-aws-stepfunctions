@@ -1,0 +1,3 @@
+# Succeed
+
+Succeed state.
