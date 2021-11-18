@@ -39,3 +39,10 @@ variable heartbeat_seconds {
   type = number
   default = null
 }
+
+
+variable timeout_seconds {
+  description = "Timeout value in seconds."
+  type = number
+  default = null
+}
