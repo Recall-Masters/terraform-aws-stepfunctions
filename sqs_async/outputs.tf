@@ -18,6 +18,7 @@ output step {
     local.maybe_retries,
     local.maybe_catches,
     local.heartbeat_seconds,
+    local.timeout_seconds,
   )
 }
 

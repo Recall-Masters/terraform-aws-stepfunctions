@@ -10,4 +10,8 @@ locals {
   heartbeat_seconds = var.heartbeat_seconds == null ? {} : {
     HeartbeatSeconds: var.heartbeat_seconds
   }
+
+  timeout_seconds = var.timeout_seconds == null ? {} : {
+    TimeoutSeconds: var.timeout_seconds
+  }
 }
