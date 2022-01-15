@@ -11,6 +11,7 @@ variable state_machine_arn {
 
 variable input {
   description = "Input object to submit to the State Machine."
+  default = null
 }
 
 variable result_path {
