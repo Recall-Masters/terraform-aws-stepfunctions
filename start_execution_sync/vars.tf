@@ -25,3 +25,15 @@ variable comment {
   default = ""
   type = string
 }
+
+
+variable next {
+  description = "Name of the next state."
+  default = null
+}
+
+
+variable end {
+  description = "If this is an end state."
+  default = null
+}
